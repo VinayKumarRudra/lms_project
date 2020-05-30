@@ -1,0 +1,130 @@
+{% extends 'layouts/tbase.html' %}
+
+{% block title %} Student Entry {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+              <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase text-muted mb-0">Class</h5>
+                            <form name='StdClass' method='post'>
+                              <select name='standard'>
+                                <option disabled='True' selected >--- selectclass ----</option>
+                                {% for class in std %}
+                                  <option value="{{ class.std}}">{{ class.std }}</option>
+                                {% endfor %}
+                              </select>
+                            </form>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase text-muted mb-0">Section</h5>
+                            <form name='StdClass' method='post'>
+                              <select name='section'>
+                                <option disabled='True' selected >--- select section ----</option>
+                                {% for class in section %}
+                                  <option result="{{ class.section }}">{{ class.section }}</option>
+                                {% endfor %}
+                              </select>
+                            </form>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase text-muted mb-0">Subject Code</h5>
+                            <form name='StdClass' method='post'>
+                              <select name='section'>
+                                <option disabled='True' selected >--- select subject code ----</option>
+                                {% for class in section %}
+                                  <option result="{{ class.subject }}">{{ class.subcode }}</option>
+                                {% endfor %}
+                              </select>
+                            </form>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col text-right">
+                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-xl-12 mb-5 mb-xl-0">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">Upload marks here</h3>
+              </div>
+              <div class="col text-right">
+                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- Projects table -->
+            <table class="table align-items-center table-flush">
+              <thead >
+                <tr>
+                  <th scope="col">student_id</th>
+                  <th scope="col">studentname</th>
+                  <th scope="col">Mid1</th>
+                  <th scope="col">Att1</th>
+                  <th scope="col">Quarterly</th>
+                  <th scope="col">Mid2</th>
+                  <th scope="col">Att2</th>
+                  <th scope="col">Half yearly</th>
+                  <th scope="col">Att3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
